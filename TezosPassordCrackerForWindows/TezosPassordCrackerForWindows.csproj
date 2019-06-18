@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66A97A0A-680E-4C2D-8077-078B65787410}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TezosPassordCrackerForWindows</RootNamespace>
+    <AssemblyName>TezosPassordCrackerForWindows</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditMask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMask.Designer.cs">
+      <DependentUpon>EditMask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterEmailAndSeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterEmailAndSeed.Designer.cs">
+      <DependentUpon>EnterEmailAndSeed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TezosPasswordCracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TezosPasswordCracker.Designer.cs">
+      <DependentUpon>TezosPasswordCracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="TezosRecoveryPicture.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tezosxtzrecovery_SFO_icon.ico" />
+    <EmbeddedResource Include="EditMask.resx">
+      <DependentUpon>EditMask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterEmailAndSeed.resx">
+      <DependentUpon>EnterEmailAndSeed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TezosPasswordCracker.resx">
+      <DependentUpon>TezosPasswordCracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="johntheripper\appveyor.yml" />
+    <Content Include="johntheripper\CONTRIBUTING.md" />
+    <Content Include="johntheripper\doc\Auditing-Kerio-Connect.md" />
+    <Content Include="johntheripper\doc\Auditing-Openfire.md" />
+    <Content Include="johntheripper\doc\AxCrypt-Auditing-HOWTO.md" />
+    <Content Include="johntheripper\doc\DiskCryptor-HOWTO.md" />
+    <Content Include="johntheripper\doc\DYNAMIC_COMPILER_FORMATS.md" />
+    <Content Include="johntheripper\doc\extras\HACKING.md" />
+    <Content Include="johntheripper\doc\Kerberos-Auditing-HOWTO.md" />
+    <Content Include="johntheripper\doc\README.7z2john.md" />
+    <Content Include="johntheripper\doc\README.krb5tgs-17-18-23.md" />
+    <Content Include="johntheripper\doc\SecureMode-tutorial.md" />
+    <Content Include="johntheripper\doc\SHOW_FORMATS.md" />
+    <Content Include="johntheripper\etc\OpenCL\vendors\amd.icd" />
+    <Content Include="johntheripper\etc\OpenCL\vendors\intel.icd" />
+    <Content Include="johntheripper\etc\OpenCL\vendors\nvidia.icd" />
+    <Content Include="johntheripper\README.md" />
+    <Content Include="johntheripper\run\7z2john.pl" />
+    <Content Include="johntheripper\run\aix2john.pl" />
+    <Content Include="johntheripper\run\alnum.chr" />
+    <Content Include="johntheripper\run\alnumspace.chr" />
+    <Content Include="johntheripper\run\alpha.chr" />
+    <Content Include="johntheripper\run\ascii.chr" />
+    <Content Include="johntheripper\run\atmail2john.pl" />
+    <Content Include="johntheripper\run\benchmark-unify" />
+    <Content Include="johntheripper\run\cisco2john.pl" />
+    <Content Include="johntheripper\run\codepage.pl" />
+    <Content Include="johntheripper\run\dictionary.rfc2865" />
+    <Content Include="johntheripper\run\digits.chr" />
+    <Content Include="johntheripper\run\dumb16.conf" />
+    <Content Include="johntheripper\run\dumb32.conf" />
+    <Content Include="johntheripper\run\dynamic.conf" />
+    <Content Include="johntheripper\run\dynamic_disabled.conf" />
+    <Content Include="johntheripper\run\dynamic_flat_sse_formats.conf" />
+    <Content Include="johntheripper\run\fuzz.dic" />
+    <Content Include="johntheripper\run\fuzz_option.pl" />
+    <Content Include="johntheripper\run\genincstats.rb" />
+    <Content Include="johntheripper\run\hextoraw.pl" />
+    <Content Include="johntheripper\run\hybrid.conf" />
+    <Content Include="johntheripper\run\ios7tojohn.pl" />
+    <Content Include="johntheripper\run\itunes_backup2john.pl" />
+    <Content Include="johntheripper\run\john.bash_completion" />
+    <Content Include="johntheripper\run\john.conf" />
+    <Content Include="johntheripper\run\john.zsh_completion" />
+    <Content Include="johntheripper\run\jtrconf.pm" />
+    <Content Include="johntheripper\run\jtr_rulez.pm" />
+    <Content Include="johntheripper\run\kernels\7z_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\agile_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\androidbackup_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\ansible_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\axcrypt2_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\axcrypt_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\bf_cpu_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\bf_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\bitlocker_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\bitwarden_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\blockchain_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\bsd_softraid_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\cloudkeychain_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\cryptmd5_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\cryptsha256_kernel_DEFAULT.cl" />
+    <Content Include="johntheripper\run\kernels\cryptsha256_kernel_GPU.cl" />
+    <Content Include="johntheripper\run\kernels\cryptsha512_kernel_DEFAULT.cl" />
+    <Content Include="johntheripper\run\kernels\cryptsha512_kernel_GPU.cl" />
+    <Content Include="johntheripper\run\kernels\DES_bs_finalize_keys_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\DES_bs_hash_checking_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\DES_bs_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\DES_bs_kernel_f.cl" />
+    <Content Include="johntheripper\run\kernels\DES_bs_kernel_h.cl" />
+    <Content Include="johntheripper\run\kernels\diskcryptor_aes_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\dmg_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\encfs_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\enpass_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\ethereum_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\fvde_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\geli_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\gpg_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\iwork_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\keepass_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\keychain_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\keyring_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\keystore_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\krb5pa-md5_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\krb5_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\lastpass_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\lm_kernel_b.cl" />
+    <Content Include="johntheripper\run\kernels\lm_kernel_f.cl" />
+    <Content Include="johntheripper\run\kernels\lotus5_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\md4_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\md5_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\mscash_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\ntlmv2_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\nt_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\o5logon_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\odf_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\office_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\oldoffice_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf1_hmac_sha1_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_hmac_md4_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_hmac_md5_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_hmac_sha1_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_hmac_sha1_unsplit_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_hmac_sha256_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_hmac_sha512_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pbkdf2_ripemd160_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pem_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pfx_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pgpdisk_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pgpsda_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pgpwde_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\phpass_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\pwsafe_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\rakp_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\rar_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\salted_sha_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\sap_pse_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\sha1_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\sha256_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\sha512_gpl_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\sha512_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\solarwinds_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\ssh_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\sspr_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\strip_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\telegram_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\tezos_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\vmx_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\wpapsk_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\xsha512_kernel.cl" />
+    <Content Include="johntheripper\run\kernels\zip_kernel.cl" />
+    <Content Include="johntheripper\run\korelogic.conf" />
+    <Content Include="johntheripper\run\lanman.chr" />
+    <Content Include="johntheripper\run\latin1.chr" />
+    <Content Include="johntheripper\run\ldif2john.pl" />
+    <Content Include="johntheripper\run\leet.pl" />
+    <Content Include="johntheripper\run\lib\ExifTool.pm" />
+    <Content Include="johntheripper\run\lib\PDF.pm" />
+    <Content Include="johntheripper\run\lib\RandomAccess.pm" />
+    <Content Include="johntheripper\run\lion2john-alt.pl" />
+    <Content Include="johntheripper\run\lion2john.pl" />
+    <Content Include="johntheripper\run\lm_ascii.chr" />
+    <Content Include="johntheripper\run\lower.chr" />
+    <Content Include="johntheripper\run\lowernum.chr" />
+    <Content Include="johntheripper\run\lowerspace.chr" />
+    <Content Include="johntheripper\run\mailer" />
+    <Content Include="johntheripper\run\makechr" />
+    <Content Include="johntheripper\run\netntlm.pl" />
+    <Content Include="johntheripper\run\network2john.lua" />
+    <Content Include="johntheripper\run\pass_gen.pl" />
+    <Content Include="johntheripper\run\pdf2john.pl" />
+    <Content Include="johntheripper\run\potcheck.pl" />
+    <Content Include="johntheripper\run\radius2john.pl" />
+    <Content Include="johntheripper\run\regex_alphabets.conf" />
+    <Content Include="johntheripper\run\relbench" />
+    <Content Include="johntheripper\run\repeats16.conf" />
+    <Content Include="johntheripper\run\repeats32.conf" />
+    <Content Include="johntheripper\run\rexgen2rules.pl" />
+    <Content Include="johntheripper\run\rulestack.pl" />
+    <Content Include="johntheripper\run\rules\best64.rule" />
+    <Content Include="johntheripper\run\rules\d3ad0ne.rule" />
+    <Content Include="johntheripper\run\rules\dive.rule" />
+    <Content Include="johntheripper\run\rules\InsidePro-PasswordsPro.rule" />
+    <Content Include="johntheripper\run\rules\passphrase-rule1.rule" />
+    <Content Include="johntheripper\run\rules\passphrase-rule2.rule" />
+    <Content Include="johntheripper\run\rules\rockyou-30000.rule" />
+    <Content Include="johntheripper\run\rules\specific.rule" />
+    <Content Include="johntheripper\run\rules\T0XlC-insert_top_100_passwords_1_G.rule" />
+    <Content Include="johntheripper\run\rules\T0XlC.rule" />
+    <Content Include="johntheripper\run\rules\T0XlCv1.rule" />
+    <Content Include="johntheripper\run\sap2john.pl" />
+    <Content Include="johntheripper\run\sha-dump.pl" />
+    <Content Include="johntheripper\run\sha-test.pl" />
+    <Content Include="johntheripper\run\stats" />
+    <Content Include="johntheripper\run\tests.in" />
+    <Content Include="johntheripper\run\unrule.pl" />
+    <Content Include="johntheripper\run\upper.chr" />
+    <Content Include="johntheripper\run\uppernum.chr" />
+    <Content Include="johntheripper\run\utf8.chr" />
+    <Content Include="johntheripper\run\vdi2john.pl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Tezos_wallet__tz1KsyixYbCqXrr8vjckmLDLYBkwGWv46PYZ_example_%40Flufffy1234.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BIP39EnglishWordList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Cjdowner-Cryptocurrency-Tezos.ico" />
+    <Content Include="johntheripper\checksums.txt" />
+    <Content Include="johntheripper\doc\CHANGES-jumbo.txt" />
+    <Content Include="johntheripper\doc\CHANGES.txt" />
+    <Content Include="johntheripper\doc\CONFIG.txt" />
+    <Content Include="johntheripper\doc\CONTACT.txt" />
+    <Content Include="johntheripper\doc\COPYING.txt" />
+    <Content Include="johntheripper\doc\CRAM-MD5.txt" />
+    <Content Include="johntheripper\doc\CREDITS-jumbo.txt" />
+    <Content Include="johntheripper\doc\CREDITS.txt" />
+    <Content Include="johntheripper\doc\DYNAMIC.txt" />
+    <Content Include="johntheripper\doc\DYNAMIC_EXPRESSIONS.txt" />
+    <Content Include="johntheripper\doc\dynamic_history.txt" />
+    <Content Include="johntheripper\doc\DYNAMIC_SCRIPTING.txt" />
+    <Content Include="johntheripper\doc\ENCODINGS.txt" />
+    <Content Include="johntheripper\doc\EXAMPLES.txt" />
+    <Content Include="johntheripper\doc\EXTERNAL.txt" />
+    <Content Include="johntheripper\doc\extras\AddressSanitizer-HOWTO.txt" />
+    <Content Include="johntheripper\doc\extras\john-1.7.9-jumbo-7-licensing-stats.txt" />
+    <Content Include="johntheripper\doc\extras\john-1.7.9-jumbo-7-licensing.txt" />
+    <Content Include="johntheripper\doc\extras\libFuzzer-HOWTO.txt" />
+    <Content Include="johntheripper\doc\extras\README-CUDA.txt" />
+    <Content Include="johntheripper\doc\FAQ.txt" />
+    <Content Include="johntheripper\doc\HDAA_README.txt" />
+    <Content Include="johntheripper\doc\INSTALL-FEDORA.txt" />
+    <Content Include="johntheripper\doc\INSTALL-UBUNTU.txt" />
+    <Content Include="johntheripper\doc\INSTALL-WINDOWS.txt" />
+    <Content Include="johntheripper\doc\INSTALL.txt" />
+    <Content Include="johntheripper\doc\LICENSE.mpi.txt" />
+    <Content Include="johntheripper\doc\LICENSE.txt" />
+    <Content Include="johntheripper\doc\MARKOV.txt" />
+    <Content Include="johntheripper\doc\MASK.txt" />
+    <Content Include="johntheripper\doc\MODES.txt" />
+    <Content Include="johntheripper\doc\NETNTLM_README.txt" />
+    <Content Include="johntheripper\doc\NEWS.txt" />
+    <Content Include="johntheripper\doc\OFFICE.txt" />
+    <Content Include="johntheripper\doc\OPTIONS.txt" />
+    <Content Include="johntheripper\doc\pass_gen.Manifest.txt" />
+    <Content Include="johntheripper\doc\pcap2john.readme.txt" />
+    <Content Include="johntheripper\doc\PRINCE.txt" />
+    <Content Include="johntheripper\doc\README-DISTROS.txt" />
+    <Content Include="johntheripper\doc\README-krb5-18-23.txt" />
+    <Content Include="johntheripper\doc\README-MIC.txt" />
+    <Content Include="johntheripper\doc\README-OPENCL.txt" />
+    <Content Include="johntheripper\doc\README-PDF.txt" />
+    <Content Include="johntheripper\doc\README-PST.txt" />
+    <Content Include="johntheripper\doc\README-TACACS+.txt" />
+    <Content Include="johntheripper\doc\README-ZIP.txt" />
+    <Content Include="johntheripper\doc\README-ZTEX.txt" />
+    <Content Include="johntheripper\doc\README.apex.txt" />
+    <Content Include="johntheripper\doc\README.Apple_DMG.txt" />
+    <Content Include="johntheripper\doc\README.bash-completion.txt" />
+    <Content Include="johntheripper\doc\README.bitcoin.txt" />
+    <Content Include="johntheripper\doc\README.BitLocker.txt" />
+    <Content Include="johntheripper\doc\README.coding-style.txt" />
+    <Content Include="johntheripper\doc\README.cprepair.txt" />
+    <Content Include="johntheripper\doc\README.Ethereum.txt" />
+    <Content Include="johntheripper\doc\README.FileVault2.txt" />
+    <Content Include="johntheripper\doc\README.format-epi.txt" />
+    <Content Include="johntheripper\doc\README.FreeBSD.txt" />
+    <Content Include="johntheripper\doc\README.gpg.txt" />
+    <Content Include="johntheripper\doc\README.IBM_AS400.txt" />
+    <Content Include="johntheripper\doc\README.ios7.txt" />
+    <Content Include="johntheripper\doc\README.keychain.txt" />
+    <Content Include="johntheripper\doc\README.keyring.txt" />
+    <Content Include="johntheripper\doc\README.keystore.txt" />
+    <Content Include="johntheripper\doc\README.kwallet.txt" />
+    <Content Include="johntheripper\doc\README.librexgen.txt" />
+    <Content Include="johntheripper\doc\README.LotusNotes.txt" />
+    <Content Include="johntheripper\doc\README.LUKS.txt" />
+    <Content Include="johntheripper\doc\README.MinGW.txt" />
+    <Content Include="johntheripper\doc\README.mozilla.txt" />
+    <Content Include="johntheripper\doc\README.mpi.txt" />
+    <Content Include="johntheripper\doc\README.pwsafe.txt" />
+    <Content Include="johntheripper\doc\README.RACF.txt" />
+    <Content Include="johntheripper\doc\README.ssh.txt" />
+    <Content Include="johntheripper\doc\README.Tezos.txt" />
+    <Content Include="johntheripper\doc\Regen-Lost-Salts.txt" />
+    <Content Include="johntheripper\doc\RULES-hashcat.txt" />
+    <Content Include="johntheripper\doc\RULES.txt" />
+    <Content Include="johntheripper\doc\SIPcrack-LICENSE.txt" />
+    <Content Include="johntheripper\doc\SUBSETS.txt" />
+    <Content Include="johntheripper\run\1password2john.py" />
+    <Content Include="johntheripper\run\adxcsouf2john.py" />
+    <Content Include="johntheripper\run\aem2john.py" />
+    <Content Include="johntheripper\run\aix2john.py" />
+    <Content Include="johntheripper\run\andotp2john.py" />
+    <Content Include="johntheripper\run\androidbackup2john.py" />
+    <Content Include="johntheripper\run\androidfde2john.py" />
+    <Content Include="johntheripper\run\ansible2john.py" />
+    <Content Include="johntheripper\run\apex2john.py" />
+    <Content Include="johntheripper\run\applenotes2john.py" />
+    <Content Include="johntheripper\run\aruba2john.py" />
+    <Content Include="johntheripper\run\axcrypt2john.py" />
+    <Content Include="johntheripper\run\base64conv.exe" />
+    <Content Include="johntheripper\run\bestcrypt2john.py" />
+    <Content Include="johntheripper\run\bitcoin2john.py" />
+    <Content Include="johntheripper\run\bitlocker2john.exe" />
+    <Content Include="johntheripper\run\bitshares2john.py" />
+    <Content Include="johntheripper\run\bitwarden2john.py" />
+    <Content Include="johntheripper\run\bks2john.py" />
+    <Content Include="johntheripper\run\blockchain2john.py" />
+    <Content Include="johntheripper\run\calc_stat.exe" />
+    <Content Include="johntheripper\run\ccache2john.py" />
+    <Content Include="johntheripper\run\cprepair.exe" />
+    <Content Include="johntheripper\run\cracf2john.py" />
+    <Content Include="johntheripper\run\cygbz2-1.dll" />
+    <Content Include="johntheripper\run\cygcrypt-2.dll" />
+    <Content Include="johntheripper\run\cygcrypto-1.1.dll" />
+    <Content Include="johntheripper\run\cyggcc_s-seh-1.dll" />
+    <Content Include="johntheripper\run\cyggmp-10.dll" />
+    <Content Include="johntheripper\run\cyggomp-1.dll" />
+    <Content Include="johntheripper\run\cygOpenCL-1.dll" />
+    <Content Include="johntheripper\run\cygwin1.dll" />
+    <Content Include="johntheripper\run\cygz.dll" />
+    <Content Include="johntheripper\run\dashlane2john.py" />
+    <Content Include="johntheripper\run\deepsound2john.py" />
+    <Content Include="johntheripper\run\diskcryptor2john.py" />
+    <Content Include="johntheripper\run\dmg2john.exe" />
+    <Content Include="johntheripper\run\dmg2john.py" />
+    <Content Include="johntheripper\run\dns\exception.py" />
+    <Content Include="johntheripper\run\dns\flags.py" />
+    <Content Include="johntheripper\run\dns\hash.py" />
+    <Content Include="johntheripper\run\dns\message.py" />
+    <Content Include="johntheripper\run\dns\name.py" />
+    <Content Include="johntheripper\run\dns\opcode.py" />
+    <Content Include="johntheripper\run\dns\rdata.py" />
+    <Content Include="johntheripper\run\dns\rdataclass.py" />
+    <Content Include="johntheripper\run\dns\rdataset.py" />
+    <Content Include="johntheripper\run\dns\rdatatype.py" />
+    <Content Include="johntheripper\run\dns\README.txt" />
+    <Content Include="johntheripper\run\dns\rrset.py" />
+    <Content Include="johntheripper\run\dns\set.py" />
+    <Content Include="johntheripper\run\dns\tokenizer.py" />
+    <Content Include="johntheripper\run\dns\tsig.py" />
+    <Content Include="johntheripper\run\dns\tsigkeyring.py" />
+    <Content Include="johntheripper\run\dns\wiredata.py" />
+    <Content Include="johntheripper\run\dns\_compat.py" />
+    <Content Include="johntheripper\run\dns\__init__.py" />
+    <Content Include="johntheripper\run\DPAPImk2john.py" />
+    <Content Include="johntheripper\run\ecryptfs2john.py" />
+    <Content Include="johntheripper\run\ejabberd2john.py" />
+    <Content Include="johntheripper\run\electrum2john.py" />
+    <Content Include="johntheripper\run\encfs2john.py" />
+    <Content Include="johntheripper\run\enpass2john.py" />
+    <Content Include="johntheripper\run\ethereum2john.py" />
+    <Content Include="johntheripper\run\filezilla2john.py" />
+    <Content Include="johntheripper\run\geli2john.py" />
+    <Content Include="johntheripper\run\genmkvpwd.exe" />
+    <Content Include="johntheripper\run\gpg2john.exe" />
+    <Content Include="johntheripper\run\hccap2john.exe" />
+    <Content Include="johntheripper\run\hccapx2john.py" />
+    <Content Include="johntheripper\run\htdigest2john.py" />
+    <Content Include="johntheripper\run\ibmiscanner2john.py" />
+    <Content Include="johntheripper\run\ikescan2john.py" />
+    <Content Include="johntheripper\run\iwork2john.py" />
+    <Content Include="johntheripper\run\john-avx-non-omp.exe" />
+    <Content Include="johntheripper\run\john-avx.exe" />
+    <Content Include="johntheripper\run\john-avx2-non-omp.exe" />
+    <Content Include="johntheripper\run\john-avx2.exe" />
+    <Content Include="johntheripper\run\john-avx512bw-non-omp.exe" />
+    <Content Include="johntheripper\run\john-avx512bw.exe" />
+    <Content Include="johntheripper\run\john-sse2-non-omp.exe" />
+    <Content Include="johntheripper\run\john-sse2.exe" />
+    <Content Include="johntheripper\run\john-sse41-non-omp.exe" />
+    <Content Include="johntheripper\run\john-sse41.exe" />
+    <Content Include="johntheripper\run\john-xop-non-omp.exe" />
+    <Content Include="johntheripper\run\john-xop.exe" />
+    <Content Include="johntheripper\run\john.exe" />
+    <Content Include="johntheripper\run\kdcdump2john.py" />
+    <Content Include="johntheripper\run\keepass2john.exe" />
+    <Content Include="johntheripper\run\kernels\opencl_aes.h" />
+    <Content Include="johntheripper\run\kernels\opencl_aes_bitslice.h" />
+    <Content Include="johntheripper\run\kernels\opencl_aes_plain.h" />
+    <Content Include="johntheripper\run\kernels\opencl_asn1.h" />
+    <Content Include="johntheripper\run\kernels\opencl_autotune.h" />
+    <Content Include="johntheripper\run\kernels\opencl_bf_std.h" />
+    <Content Include="johntheripper\run\kernels\opencl_bitlocker.h" />
+    <Content Include="johntheripper\run\kernels\opencl_blowfish.h" />
+    <Content Include="johntheripper\run\kernels\opencl_cast.h" />
+    <Content Include="johntheripper\run\kernels\opencl_chacha.h" />
+    <Content Include="johntheripper\run\kernels\opencl_cmac.h" />
+    <Content Include="johntheripper\run\kernels\opencl_common.h" />
+    <Content Include="johntheripper\run\kernels\opencl_des.h" />
+    <Content Include="johntheripper\run\kernels\opencl_DES_hst_dev_shared.h" />
+    <Content Include="johntheripper\run\kernels\opencl_DES_kernel_params.h" />
+    <Content Include="johntheripper\run\kernels\opencl_device_info.h" />
+    <Content Include="johntheripper\run\kernels\opencl_hash_check_128.h" />
+    <Content Include="johntheripper\run\kernels\opencl_hmac_sha1.h" />
+    <Content Include="johntheripper\run\kernels\opencl_hmac_sha256.h" />
+    <Content Include="johntheripper\run\kernels\opencl_hmac_sha512.h" />
+    <Content Include="johntheripper\run\kernels\opencl_keccak.h" />
+    <Content Include="johntheripper\run\kernels\opencl_lm.h" />
+    <Content Include="johntheripper\run\kernels\opencl_lm_finalize_keys.h" />
+    <Content Include="johntheripper\run\kernels\opencl_lm_hst_dev_shared.h" />
+    <Content Include="johntheripper\run\kernels\opencl_lm_kernel_params.h" />
+    <Content Include="johntheripper\run\kernels\opencl_lotus5_fmt.h" />
+    <Content Include="johntheripper\run\kernels\opencl_mask.h" />
+    <Content Include="johntheripper\run\kernels\opencl_mask_extras.h" />
+    <Content Include="johntheripper\run\kernels\opencl_md4.h" />
+    <Content Include="johntheripper\run\kernels\opencl_md4_ctx.h" />
+    <Content Include="johntheripper\run\kernels\opencl_md5.h" />
+    <Content Include="johntheripper\run\kernels\opencl_md5_ctx.h" />
+    <Content Include="johntheripper\run\kernels\opencl_misc.h" />
+    <Content Include="johntheripper\run\kernels\opencl_mscash2_helper_plug.h" />
+    <Content Include="johntheripper\run\kernels\opencl_nonstd.h" />
+    <Content Include="johntheripper\run\kernels\opencl_pbkdf1_hmac_sha1.h" />
+    <Content Include="johntheripper\run\kernels\opencl_pbkdf2_hmac_md4.h" />
+    <Content Include="johntheripper\run\kernels\opencl_pbkdf2_hmac_md5.h" />
+    <Content Include="johntheripper\run\kernels\opencl_pbkdf2_hmac_sha1.h" />
+    <Content Include="johntheripper\run\kernels\opencl_pbkdf2_hmac_sha256.h" />
+    <Content Include="johntheripper\run\kernels\opencl_pkcs12.h" />
+    <Content Include="johntheripper\run\kernels\opencl_rawsha256.h" />
+    <Content Include="johntheripper\run\kernels\opencl_rawsha512.h" />
+    <Content Include="johntheripper\run\kernels\opencl_rc4.h" />
+    <Content Include="johntheripper\run\kernels\opencl_ripemd.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sboxes-s.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sboxes.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha1.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha1_ctx.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha2.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha256.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha256crypt.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha2_common.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha2_ctx.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha512.h" />
+    <Content Include="johntheripper\run\kernels\opencl_sha512crypt.h" />
+    <Content Include="johntheripper\run\kernels\opencl_twofish.h" />
+    <Content Include="johntheripper\run\kernels\opencl_unicode.h" />
+    <Content Include="johntheripper\run\keychain2john.py" />
+    <Content Include="johntheripper\run\keyring2john.py" />
+    <Content Include="johntheripper\run\keystore2john.py" />
+    <Content Include="johntheripper\run\kirbi2john.py" />
+    <Content Include="johntheripper\run\known_hosts2john.py" />
+    <Content Include="johntheripper\run\krb2john.py" />
+    <Content Include="johntheripper\run\kwallet2john.py" />
+    <Content Include="johntheripper\run\lastpass2john.py" />
+    <Content Include="johntheripper\run\libreoffice2john.py" />
+    <Content Include="johntheripper\run\lotus2john.py" />
+    <Content Include="johntheripper\run\luks2john.py" />
+    <Content Include="johntheripper\run\mac2john-alt.py" />
+    <Content Include="johntheripper\run\mac2john.py" />
+    <Content Include="johntheripper\run\mcafee_epo2john.py" />
+    <Content Include="johntheripper\run\mkvcalcproba.exe" />
+    <Content Include="johntheripper\run\monero2john.py" />
+    <Content Include="johntheripper\run\money2john.py" />
+    <Content Include="johntheripper\run\mongodb2john.js" />
+    <Content Include="johntheripper\run\mozilla2john.py" />
+    <Content Include="johntheripper\run\multibit2john.py" />
+    <Content Include="johntheripper\run\neo2john.py" />
+    <Content Include="johntheripper\run\netscreen.py" />
+    <Content Include="johntheripper\run\office2john.py" />
+    <Content Include="johntheripper\run\openbsd_softraid2john.py" />
+    <Content Include="johntheripper\run\openssl2john.py" />
+    <Content Include="johntheripper\run\oui.txt" />
+    <Content Include="johntheripper\run\padlock2john.py" />
+    <Content Include="johntheripper\run\password.lst" />
+    <Content Include="johntheripper\run\pcap2john.py" />
+    <Content Include="johntheripper\run\pem2john.py" />
+    <Content Include="johntheripper\run\pfx2john.py" />
+    <Content Include="johntheripper\run\pgpdisk2john.py" />
+    <Content Include="johntheripper\run\pgpsda2john.py" />
+    <Content Include="johntheripper\run\pgpwde2john.py" />
+    <Content Include="johntheripper\run\prosody2john.py" />
+    <Content Include="johntheripper\run\pse2john.py" />
+    <Content Include="johntheripper\run\ps_token2john.py" />
+    <Content Include="johntheripper\run\putty2john.exe" />
+    <Content Include="johntheripper\run\pwsafe2john.py" />
+    <Content Include="johntheripper\run\racf2john.exe" />
+    <Content Include="johntheripper\run\radius2john.py" />
+    <Content Include="johntheripper\run\rar2john.exe" />
+    <Content Include="johntheripper\run\raw2dyna.exe" />
+    <Content Include="johntheripper\run\signal2john.py" />
+    <Content Include="johntheripper\run\sipdump2john.py" />
+    <Content Include="johntheripper\run\ssh2john.py" />
+    <Content Include="johntheripper\run\sspr2john.py" />
+    <Content Include="johntheripper\run\staroffice2john.py" />
+    <Content Include="johntheripper\run\strip2john.py" />
+    <Content Include="johntheripper\run\telegram2john.py" />
+    <Content Include="johntheripper\run\tezos2john.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="johntheripper\run\tgtsnarf.exe" />
+    <Content Include="johntheripper\run\truecrypt2john.py" />
+    <Content Include="johntheripper\run\uaf2john.exe" />
+    <Content Include="johntheripper\run\unafs.exe" />
+    <Content Include="johntheripper\run\undrop.exe" />
+    <Content Include="johntheripper\run\unique.exe" />
+    <Content Include="johntheripper\run\unshadow.exe" />
+    <Content Include="johntheripper\run\vmx2john.py" />
+    <Content Include="johntheripper\run\wpapcap2john.exe" />
+    <Content Include="johntheripper\run\zip2john.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
