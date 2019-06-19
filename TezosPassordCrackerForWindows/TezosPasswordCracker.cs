@@ -54,8 +54,48 @@ namespace TezosPassordCrackerForWindows
         private void ButtonGenerateHashesFile_Click(object sender, EventArgs e)
         {
             EnterEmailAndSeed z = new EnterEmailAndSeed();
-            z.ShowDialog();
+            if (z.ShowDialog() == DialogResult.Yes)
+            {
+                SetRichTextBoxText("\n" + "New Hashfile Created. Backup all current session files", Color.Blue);
+
+                //If we are running. Stop.
+                SendStopMessageToJohnTheRipper();
+
+                //backup all Sessions
+                BackupSessionFiles(DefaultSessionName);
+                BackupSessionFiles(DefaultMaskName);
+
+                DetectSolvedPassword();
+            }
             CheckForHashFile();
+        }
+
+        private bool BackupSessionFiles(string sessionName)
+        {
+            try
+            {
+                string myTime = DateTime.Now.ToString("MMM'-'dd'-'yyyy_HHmmss");
+
+                if (File.Exists(JTRExecutableDirectory + sessionName + ".rec"))
+                {
+                    SetRichTextBoxText("\n" + "Backing up previous session.", Color.Blue);
+                    File.Move(JTRExecutableDirectory + sessionName + ".rec", JTRExecutableDirectory + sessionName + "Backup" + myTime + ".rec");
+                    SetRichTextBoxText("\n" + "Backup complte: " + sessionName + "Backup" + myTime + ".rec", Color.Blue);
+                }
+                if (File.Exists(JTRExecutableDirectory + sessionName + ".log"))
+                {
+                    File.Move(JTRExecutableDirectory + sessionName + ".log", JTRExecutableDirectory + sessionName + "Backup" + myTime + ".log");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:\n\n" + ex.Message, "Session Backup Error ("+sessionName+")", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+
         }
 
 
@@ -98,26 +138,7 @@ namespace TezosPassordCrackerForWindows
                 SendStopMessageToJohnTheRipper();
 
                 //backup current sessions
-                try
-                {
-                    string myTime = DateTime.Now.ToString("MMM'-'dd'-'yyyy_HHmmss");
-                    
-                    if (File.Exists(JTRExecutableDirectory + DefaultMaskName + ".rec"))
-                    {
-                        SetRichTextBoxText("\n" + "Backing up previous session.", Color.Blue);
-                        File.Move(JTRExecutableDirectory + DefaultMaskName + ".rec", JTRExecutableDirectory + DefaultMaskName + "Backup" + myTime + ".rec");
-                        SetRichTextBoxText("\n" + "Backup complte: " + DefaultMaskName + "Backup" + myTime + ".rec", Color.Blue);
-                    }
-                    if (File.Exists(JTRExecutableDirectory + DefaultMaskName + ".log"))
-                    {
-                        File.Move(JTRExecutableDirectory + DefaultMaskName + ".log", JTRExecutableDirectory + DefaultMaskName + "Backup" + myTime + ".log");
-                    }
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error:\n\n" + ex.Message, "Session Backup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                BackupSessionFiles(DefaultMaskName);
 
                 //Start
                 if (File.Exists(DefaultMaskFile))
@@ -339,6 +360,7 @@ namespace TezosPassordCrackerForWindows
             if (myTimerKeyboardInputToJohn != null) myTimerKeyboardInputToJohn.Stop();
             if (myTimerCheckOnJohn != null) myTimerCheckOnJohn.Stop();
             SetRichTextBoxText("\nExit: " + prcPythonCheck.ExitTime.ToString() + " Exit Code:" + prcPythonCheck.ExitCode + "\n", Color.Purple);
+            DetectSolvedPassword();
         }
 
         private void JTROutputHandler(object sendingProcess, DataReceivedEventArgs outLine)
@@ -431,7 +453,7 @@ namespace TezosPassordCrackerForWindows
 
                     textBoxPassword.BackColor = myColor;
 
-                    textBoxPassword.AppendText(text);
+                    textBoxPassword.Text = text;
 
                     textBoxPassword.SelectionStart = textBoxPassword.Text.Length;
 
@@ -467,7 +489,7 @@ namespace TezosPassordCrackerForWindows
             catch (System.ComponentModel.Win32Exception)
             {
                 //This is not known
-                MessageBox.Show("Python Not Insalled, or not included in PATH. \n\nThis needs to be fixed before we can continue.", "Python Installed?", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Python Not Insalled, or not included in PATH. \n\nThis needs to be fixed before we can continue.\n\nYou need to download, and install python. \nhttps://www.python.org/downloads/release/python-373/\nRemember to check \"Add Python 3.7 to PATH\" when installing.", "Python Installed?", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
             catch (Exception ex)
@@ -488,6 +510,7 @@ namespace TezosPassordCrackerForWindows
             CheckForHashFile();
             CheckForMaskFile();
             CheckForBestGuessFile();
+            DetectSolvedPassword();
 
             this.Name = "Tezos XTZ Recovery  -  Version " + Application.ProductVersion;
         }
@@ -504,7 +527,7 @@ namespace TezosPassordCrackerForWindows
             }
             else
             {
-                labelStep1.Text = "Step 1: Incomplete, you need to fill out your information. Click \"Add Information\" to get started.";
+                labelStep1.Text = "Step 1: Incomplete, you need to fill out your information.";
                 labelStep1.ForeColor = Color.Red;
                 buttonGenerateHashesFile.Text = "Add Information";
                 buttonGenerateHashesFile.Font = new Font(buttonGenerateHashesFile.Font.Name, buttonGenerateHashesFile.Font.Size, FontStyle.Bold);
@@ -614,12 +637,41 @@ namespace TezosPassordCrackerForWindows
 
         private void LinkLabelGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start(@"https://github.com/LordDarkHelmet/");
+            Process.Start(@"https://github.com/LordDarkHelmet/TezosPassordCrackerForWindows");
         }
 
         private void LinkLabelEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("mailto:TezosHelp@outlook.com");
+        }
+
+        private bool DetectSolvedPassword()
+        {
+            string passwordFoundFile = JTRExecutableDirectory + "john.pot";
+            if (File.Exists(passwordFoundFile) && File.Exists(EnterEmailAndSeed.myHashesFileFull))
+            {
+                string[] results = File.ReadAllLines(passwordFoundFile);
+                foreach (string result in results)
+                {
+                    try
+                    {
+                        if (File.ReadAllText(EnterEmailAndSeed.myHashesFileFull).Contains(result.Split(':')[0]))
+                        {
+                            string myPassword = result.Split(':')[1];
+                            SetTextBoxPassword(myPassword, Color.Green);
+                            return true;
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    
+                }
+
+            }
+            return false;
         }
     }
 

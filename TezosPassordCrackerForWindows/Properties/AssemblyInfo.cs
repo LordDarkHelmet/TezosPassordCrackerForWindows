@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TezosPassordCrackerForWindows")]
-[assembly: AssemblyDescription("A Tezos Passord Cracker For Windows. Due to a faulty UI the")]
+[assembly: AssemblyDescription("A Tezos Passord Cracker For Windows.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tezos XTZ Recovery - Telegram Group")]
 [assembly: AssemblyProduct("TezosPassordCrackerForWindows")]

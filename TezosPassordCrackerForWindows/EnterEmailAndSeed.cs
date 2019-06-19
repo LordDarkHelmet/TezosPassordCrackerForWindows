@@ -17,6 +17,7 @@ namespace TezosPassordCrackerForWindows
         public EnterEmailAndSeed()
         {
             InitializeComponent();
+            DialogResult = DialogResult.No;
         }
 
         private readonly static string myPythonAppWorkingDirectory = @"johntheripper\run\";
@@ -218,7 +219,11 @@ namespace TezosPassordCrackerForWindows
             }
             else
             {
-                GenerateJTR_TezosHashFile(words, textBoxEmail.Text, textBoxPublicKey.Text);
+                if (GenerateJTR_TezosHashFile(words, textBoxEmail.Text, textBoxPublicKey.Text))
+                {
+                    DialogResult = DialogResult.Yes;
+                }
+               
             }
 
         }

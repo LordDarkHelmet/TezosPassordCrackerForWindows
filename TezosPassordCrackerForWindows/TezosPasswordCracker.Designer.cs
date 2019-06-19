@@ -47,11 +47,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabelTelegram = new System.Windows.Forms.LinkLabel();
             this.groupBoxResources = new System.Windows.Forms.GroupBox();
-            this.textBoxAbout = new System.Windows.Forms.TextBox();
+            this.textBoxEmailSupport = new System.Windows.Forms.TextBox();
+            this.linkLabelEmail = new System.Windows.Forms.LinkLabel();
             this.textBoxDeveloperInfo = new System.Windows.Forms.TextBox();
             this.linkLabelGitHub = new System.Windows.Forms.LinkLabel();
-            this.linkLabelEmail = new System.Windows.Forms.LinkLabel();
-            this.textBoxEmailSupport = new System.Windows.Forms.TextBox();
+            this.textBoxAbout = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxResources.SuspendLayout();
             this.SuspendLayout();
@@ -231,6 +231,7 @@
             // 
             // groupBoxResources
             // 
+            this.groupBoxResources.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxResources.Controls.Add(this.textBoxEmailSupport);
             this.groupBoxResources.Controls.Add(this.linkLabelTelegram);
             this.groupBoxResources.Controls.Add(this.linkLabelEmail);
@@ -245,19 +246,29 @@
             this.groupBoxResources.TabStop = false;
             this.groupBoxResources.Text = "Additional Resources";
             // 
-            // textBoxAbout
+            // textBoxEmailSupport
             // 
-            this.textBoxAbout.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAbout.Enabled = false;
-            this.textBoxAbout.Location = new System.Drawing.Point(212, 21);
-            this.textBoxAbout.Multiline = true;
-            this.textBoxAbout.Name = "textBoxAbout";
-            this.textBoxAbout.ReadOnly = true;
-            this.textBoxAbout.Size = new System.Drawing.Size(357, 58);
-            this.textBoxAbout.TabIndex = 21;
-            this.textBoxAbout.Text = "This program was made by the Tezos XTZ Recovery group. It is here to make crackin" +
-    "g your password a little bit easier for Windows 10. If you need help, please joi" +
-    "n out group.";
+            this.textBoxEmailSupport.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxEmailSupport.Enabled = false;
+            this.textBoxEmailSupport.Location = new System.Drawing.Point(212, 179);
+            this.textBoxEmailSupport.Multiline = true;
+            this.textBoxEmailSupport.Name = "textBoxEmailSupport";
+            this.textBoxEmailSupport.ReadOnly = true;
+            this.textBoxEmailSupport.Size = new System.Drawing.Size(329, 17);
+            this.textBoxEmailSupport.TabIndex = 25;
+            this.textBoxEmailSupport.Text = "You can send an email to us.";
+            // 
+            // linkLabelEmail
+            // 
+            this.linkLabelEmail.AutoSize = true;
+            this.linkLabelEmail.Location = new System.Drawing.Point(403, 199);
+            this.linkLabelEmail.Name = "linkLabelEmail";
+            this.linkLabelEmail.Size = new System.Drawing.Size(166, 17);
+            this.linkLabelEmail.TabIndex = 24;
+            this.linkLabelEmail.TabStop = true;
+            this.linkLabelEmail.Text = "TezosHelp@outlook.com";
+            this.linkLabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.linkLabelEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelEmail_LinkClicked);
             // 
             // textBoxDeveloperInfo
             // 
@@ -283,29 +294,19 @@
             this.linkLabelGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabelGitHub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelGitHub_LinkClicked);
             // 
-            // linkLabelEmail
+            // textBoxAbout
             // 
-            this.linkLabelEmail.AutoSize = true;
-            this.linkLabelEmail.Location = new System.Drawing.Point(403, 199);
-            this.linkLabelEmail.Name = "linkLabelEmail";
-            this.linkLabelEmail.Size = new System.Drawing.Size(166, 17);
-            this.linkLabelEmail.TabIndex = 24;
-            this.linkLabelEmail.TabStop = true;
-            this.linkLabelEmail.Text = "TezosHelp@outlook.com";
-            this.linkLabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.linkLabelEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelEmail_LinkClicked);
-            // 
-            // textBoxEmailSupport
-            // 
-            this.textBoxEmailSupport.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxEmailSupport.Enabled = false;
-            this.textBoxEmailSupport.Location = new System.Drawing.Point(212, 179);
-            this.textBoxEmailSupport.Multiline = true;
-            this.textBoxEmailSupport.Name = "textBoxEmailSupport";
-            this.textBoxEmailSupport.ReadOnly = true;
-            this.textBoxEmailSupport.Size = new System.Drawing.Size(329, 17);
-            this.textBoxEmailSupport.TabIndex = 25;
-            this.textBoxEmailSupport.Text = "You can send an email to us.";
+            this.textBoxAbout.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAbout.Enabled = false;
+            this.textBoxAbout.Location = new System.Drawing.Point(212, 21);
+            this.textBoxAbout.Multiline = true;
+            this.textBoxAbout.Name = "textBoxAbout";
+            this.textBoxAbout.ReadOnly = true;
+            this.textBoxAbout.Size = new System.Drawing.Size(357, 58);
+            this.textBoxAbout.TabIndex = 21;
+            this.textBoxAbout.Text = "This program was made by the Tezos XTZ Recovery group. It is here to make crackin" +
+    "g your password a little bit easier for Windows 10. If you need help, please joi" +
+    "n out group.";
             // 
             // TezosPasswordCracker
             // 
