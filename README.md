@@ -14,6 +14,10 @@ Setp 3: Depending on your machine, the installer may ask you to extend your PATH
 
 ---
 
-For recovery assistance please visit: https://t.me/xtzrecovery 
+For Tezos recovery assistance please visit: https://t.me/xtzrecovery 
 
 The backend is using John The Ripper, see https://github.com/magnumripper/JohnTheRipper
+
+Donations are welcome: 
+BTC:   33DxcicBuN7wvqByLfmHH9FC9AvuEa3cGh
+Tezos: tz1WYZrE1Lhd5cgh4vzUhJB1UBNGEdekbskQ
