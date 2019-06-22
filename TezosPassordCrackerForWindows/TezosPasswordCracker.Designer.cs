@@ -52,6 +52,11 @@
             this.textBoxDeveloperInfo = new System.Windows.Forms.TextBox();
             this.linkLabelGitHub = new System.Windows.Forms.LinkLabel();
             this.textBoxAbout = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelDonationTezosAddress = new System.Windows.Forms.Label();
+            this.linkLabelDonationBTC = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDonationTezos = new System.Windows.Forms.LinkLabel();
+            this.labelDonations = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxResources.SuspendLayout();
             this.SuspendLayout();
@@ -102,7 +107,7 @@
             this.richTextBoxJTROutput.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBoxJTROutput.Location = new System.Drawing.Point(12, 454);
             this.richTextBoxJTROutput.Name = "richTextBoxJTROutput";
-            this.richTextBoxJTROutput.Size = new System.Drawing.Size(1033, 257);
+            this.richTextBoxJTROutput.Size = new System.Drawing.Size(1033, 327);
             this.richTextBoxJTROutput.TabIndex = 7;
             this.richTextBoxJTROutput.Text = "";
             // 
@@ -140,11 +145,9 @@
             this.labelStep4.AutoSize = true;
             this.labelStep4.Location = new System.Drawing.Point(9, 338);
             this.labelStep4.Name = "labelStep4";
-            this.labelStep4.Size = new System.Drawing.Size(1047, 17);
+            this.labelStep4.Size = new System.Drawing.Size(394, 17);
             this.labelStep4.TabIndex = 11;
-            this.labelStep4.Text = "Step 4: Brute Force, this is the longest version and will take the most amount of" +
-    " time. I recomend that you learn more about rules and masks if your password is " +
-    "long. ";
+            this.labelStep4.Text = "Step 4: Brute Force is a last resort. Use rules and masks first!";
             // 
             // labelStep1
             // 
@@ -212,7 +215,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(6, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
@@ -232,16 +235,21 @@
             // groupBoxResources
             // 
             this.groupBoxResources.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxResources.Controls.Add(this.label2);
             this.groupBoxResources.Controls.Add(this.textBoxEmailSupport);
+            this.groupBoxResources.Controls.Add(this.labelDonationTezosAddress);
             this.groupBoxResources.Controls.Add(this.linkLabelTelegram);
+            this.groupBoxResources.Controls.Add(this.linkLabelDonationBTC);
             this.groupBoxResources.Controls.Add(this.linkLabelEmail);
+            this.groupBoxResources.Controls.Add(this.linkLabelDonationTezos);
             this.groupBoxResources.Controls.Add(this.pictureBox1);
+            this.groupBoxResources.Controls.Add(this.labelDonations);
             this.groupBoxResources.Controls.Add(this.textBoxDeveloperInfo);
             this.groupBoxResources.Controls.Add(this.linkLabelGitHub);
             this.groupBoxResources.Controls.Add(this.textBoxAbout);
-            this.groupBoxResources.Location = new System.Drawing.Point(470, 68);
+            this.groupBoxResources.Location = new System.Drawing.Point(470, 69);
             this.groupBoxResources.Name = "groupBoxResources";
-            this.groupBoxResources.Size = new System.Drawing.Size(575, 235);
+            this.groupBoxResources.Size = new System.Drawing.Size(575, 340);
             this.groupBoxResources.TabIndex = 21;
             this.groupBoxResources.TabStop = false;
             this.groupBoxResources.Text = "Additional Resources";
@@ -308,11 +316,70 @@
     "g your password a little bit easier for Windows 10. If you need help, please joi" +
     "n out group.";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 286);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 18);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Bitcoin";
+            // 
+            // labelDonationTezosAddress
+            // 
+            this.labelDonationTezosAddress.AutoSize = true;
+            this.labelDonationTezosAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDonationTezosAddress.Location = new System.Drawing.Point(39, 253);
+            this.labelDonationTezosAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDonationTezosAddress.Name = "labelDonationTezosAddress";
+            this.labelDonationTezosAddress.Size = new System.Drawing.Size(55, 18);
+            this.labelDonationTezosAddress.TabIndex = 34;
+            this.labelDonationTezosAddress.Text = "Tezos";
+            // 
+            // linkLabelDonationBTC
+            // 
+            this.linkLabelDonationBTC.AutoSize = true;
+            this.linkLabelDonationBTC.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelDonationBTC.Location = new System.Drawing.Point(107, 284);
+            this.linkLabelDonationBTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabelDonationBTC.Name = "linkLabelDonationBTC";
+            this.linkLabelDonationBTC.Size = new System.Drawing.Size(349, 20);
+            this.linkLabelDonationBTC.TabIndex = 33;
+            this.linkLabelDonationBTC.TabStop = true;
+            this.linkLabelDonationBTC.Text = "33DxcicBuN7wvqByLfmHH9FC9AvuEa3cGh";
+            this.linkLabelDonationBTC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelDonationBTC_LinkClicked);
+            // 
+            // linkLabelDonationTezos
+            // 
+            this.linkLabelDonationTezos.AutoSize = true;
+            this.linkLabelDonationTezos.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelDonationTezos.Location = new System.Drawing.Point(107, 251);
+            this.linkLabelDonationTezos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabelDonationTezos.Name = "linkLabelDonationTezos";
+            this.linkLabelDonationTezos.Size = new System.Drawing.Size(369, 20);
+            this.linkLabelDonationTezos.TabIndex = 32;
+            this.linkLabelDonationTezos.TabStop = true;
+            this.linkLabelDonationTezos.Text = "tz1WYZrE1Lhd5cgh4vzUhJB1UBNGEdekbskQ";
+            this.linkLabelDonationTezos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelDonationTezos_LinkClicked);
+            // 
+            // labelDonations
+            // 
+            this.labelDonations.AutoSize = true;
+            this.labelDonations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDonations.Location = new System.Drawing.Point(10, 229);
+            this.labelDonations.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDonations.Name = "labelDonations";
+            this.labelDonations.Size = new System.Drawing.Size(196, 18);
+            this.labelDonations.TabIndex = 31;
+            this.labelDonations.Text = "Donations are welcome: ";
+            // 
             // TezosPasswordCracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 723);
+            this.ClientSize = new System.Drawing.Size(1057, 793);
             this.Controls.Add(this.groupBoxResources);
             this.Controls.Add(this.buttonMaskEdit);
             this.Controls.Add(this.buttonBestGuessEdit);
@@ -367,6 +434,11 @@
         private System.Windows.Forms.LinkLabel linkLabelGitHub;
         private System.Windows.Forms.TextBox textBoxAbout;
         private System.Windows.Forms.TextBox textBoxEmailSupport;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelDonationTezosAddress;
+        private System.Windows.Forms.LinkLabel linkLabelDonationBTC;
+        private System.Windows.Forms.LinkLabel linkLabelDonationTezos;
+        private System.Windows.Forms.Label labelDonations;
     }
 }
 
