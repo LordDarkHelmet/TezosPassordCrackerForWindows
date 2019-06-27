@@ -657,9 +657,12 @@ namespace TezosPassordCrackerForWindows
                     {
                         if (File.ReadAllText(EnterEmailAndSeed.myHashesFileFull).Contains(result.Split(':')[0]))
                         {
-                            string myPassword = result.Split(':')[1];
-                            SetTextBoxPassword(myPassword, Color.Green);
-                            return true;
+                            if (result != string.Empty)
+                            {
+                                string myPassword = result.Split(':')[1];
+                                SetTextBoxPassword(myPassword, Color.Green);
+                                return true;
+                            }
                         }
 
                     }

@@ -16,8 +16,8 @@ namespace TezosPassordCrackerForWindows
 
         private const string WORDLIST_KEYWORD = " --wordlist=";
 
-        private string MaskFile;
-        private string JTRMaskDocument;
+        private readonly string MaskFile;
+        private readonly string JTRMaskDocument;
 
         public EditMask(string defaultMaskFile, string JTRMaskDoc)
         {
