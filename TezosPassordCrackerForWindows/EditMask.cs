@@ -14,6 +14,8 @@ namespace TezosPassordCrackerForWindows
     public partial class EditMask : Form
     {
 
+        private const string WORDLIST_KEYWORD = " --wordlist=";
+
         private string MaskFile;
         private string JTRMaskDocument;
 
@@ -27,17 +29,30 @@ namespace TezosPassordCrackerForWindows
 
         bool bypassQuestion = false;
         bool save = false;
+        bool justExit = false;
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
             bypassQuestion = true;
             save = true;
-            this.Close();
+            if (WriteMyTezosMaskFile())
+            {
+                justExit = true;
+                this.Close();
+            }
+            else
+            {
+                save = false;
+            }
         }
 
 
         private void EditMask_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (justExit)
+            {
+                return;
+            }
             if (bypassQuestion)
             {
                 if (save)
@@ -75,7 +90,20 @@ namespace TezosPassordCrackerForWindows
                 return false;
             }
 
-            textBoxMask.Text = File.ReadAllText(MaskFile);
+            string[] myDelimiter = new string[1];
+            myDelimiter[0] = WORDLIST_KEYWORD;
+
+            string[] myStuff = File.ReadAllText(MaskFile).Split(myDelimiter, StringSplitOptions.RemoveEmptyEntries);
+
+            if (myStuff.Length >= 1)
+            {
+                textBoxMask.Text = myStuff[0];
+            }
+
+            if (myStuff.Length >= 2)
+            {
+                textBoxWordListFile.Text = myStuff[1];
+            }
 
             return true;
         }
@@ -96,9 +124,28 @@ namespace TezosPassordCrackerForWindows
                 return false;
             }
 
+            string myStuffToSave = textBoxMask.Text;
+
+            //Now lets validate the word list
+            textBoxWordListFile.Text = textBoxWordListFile.Text.Trim();
+
+            if (textBoxWordListFile.Text != string.Empty)
+            {
+                //lets add the word list 
+
+                //Does that file exist?
+                if (!File.Exists(textBoxWordListFile.Text))
+                {
+                    MessageBox.Show("Word List File Does Not Exist.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                myStuffToSave += WORDLIST_KEYWORD + textBoxWordListFile.Text;
+            }
+
             try
             {
-                File.WriteAllText(MaskFile, textBoxMask.Text, Encoding.UTF8);
+                File.WriteAllText(MaskFile, myStuffToSave, Encoding.UTF8);
                 DialogResult = DialogResult.Yes;
             }
             catch (Exception ex)
@@ -115,6 +162,39 @@ namespace TezosPassordCrackerForWindows
             bypassQuestion = true;
             save = false;
             Close();
+        }
+
+        private void ButtonAddWordList_Click(object sender, EventArgs e)
+        {
+
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+
+                try
+                {
+                    if (Directory.Exists(Path.GetDirectoryName(textBoxWordListFile.Text)))
+                    {
+                        openFileDialog.InitialDirectory = Path.GetDirectoryName(textBoxWordListFile.Text);
+                    }
+                }
+                catch (Exception)
+                {
+                    
+                }
+
+
+                openFileDialog.Filter = "Wordlist (*.txt, *.lst)|*.txt;*.lst|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    textBoxWordListFile.Text = openFileDialog.FileName;
+
+                }
+            }
         }
     }
 }
