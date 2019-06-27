@@ -629,10 +629,10 @@ namespace TezosPassordCrackerForWindows
             Process.Start(@"https://t.me/xtzrecovery");
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void PictureBoxRecovery_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Version " + Application.ProductVersion + "\nProduct Name " + Application.ProductName + "\nCompany Name " + Application.CompanyName, "About" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+            About myAbout = new About();
+            myAbout.ShowDialog();
         }
 
         private void LinkLabelGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

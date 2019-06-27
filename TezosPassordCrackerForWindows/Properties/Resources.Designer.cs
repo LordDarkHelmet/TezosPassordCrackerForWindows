@@ -59,5 +59,35 @@ namespace TezosPassordCrackerForWindows.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _12345 {
+            get {
+                object obj = ResourceManager.GetObject("_12345", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TezosRecoveryPicture {
+            get {
+                object obj = ResourceManager.GetObject("TezosRecoveryPicture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon tezosxtzrecovery_SFO_icon {
+            get {
+                object obj = ResourceManager.GetObject("tezosxtzrecovery_SFO_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

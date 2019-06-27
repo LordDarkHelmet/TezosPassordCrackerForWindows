@@ -44,28 +44,29 @@
             this.buttonMask = new System.Windows.Forms.Button();
             this.buttonBestGuessEdit = new System.Windows.Forms.Button();
             this.buttonMaskEdit = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRecovery = new System.Windows.Forms.PictureBox();
             this.linkLabelTelegram = new System.Windows.Forms.LinkLabel();
             this.groupBoxResources = new System.Windows.Forms.GroupBox();
+            this.labelBitcoinDonationAddress = new System.Windows.Forms.Label();
             this.textBoxEmailSupport = new System.Windows.Forms.TextBox();
+            this.labelDonationTezosAddress = new System.Windows.Forms.Label();
+            this.linkLabelDonationBTC = new System.Windows.Forms.LinkLabel();
             this.linkLabelEmail = new System.Windows.Forms.LinkLabel();
+            this.linkLabelDonationTezos = new System.Windows.Forms.LinkLabel();
+            this.labelDonations = new System.Windows.Forms.Label();
             this.textBoxDeveloperInfo = new System.Windows.Forms.TextBox();
             this.linkLabelGitHub = new System.Windows.Forms.LinkLabel();
             this.textBoxAbout = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelDonationTezosAddress = new System.Windows.Forms.Label();
-            this.linkLabelDonationBTC = new System.Windows.Forms.LinkLabel();
-            this.linkLabelDonationTezos = new System.Windows.Forms.LinkLabel();
-            this.labelDonations = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecovery)).BeginInit();
             this.groupBoxResources.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonGenerateHashesFile
             // 
-            this.buttonGenerateHashesFile.Location = new System.Drawing.Point(12, 98);
+            this.buttonGenerateHashesFile.Location = new System.Drawing.Point(9, 80);
+            this.buttonGenerateHashesFile.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGenerateHashesFile.Name = "buttonGenerateHashesFile";
-            this.buttonGenerateHashesFile.Size = new System.Drawing.Size(130, 51);
+            this.buttonGenerateHashesFile.Size = new System.Drawing.Size(98, 41);
             this.buttonGenerateHashesFile.TabIndex = 0;
             this.buttonGenerateHashesFile.Text = "Generate";
             this.buttonGenerateHashesFile.UseVisualStyleBackColor = true;
@@ -74,9 +75,10 @@
             // labelStep2
             // 
             this.labelStep2.AutoSize = true;
-            this.labelStep2.Location = new System.Drawing.Point(9, 161);
+            this.labelStep2.Location = new System.Drawing.Point(7, 131);
+            this.labelStep2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStep2.Name = "labelStep2";
-            this.labelStep2.Size = new System.Drawing.Size(433, 17);
+            this.labelStep2.Size = new System.Drawing.Size(329, 13);
             this.labelStep2.TabIndex = 2;
             this.labelStep2.Text = "Step 2: Masks are a effective when  you might know  your password";
             // 
@@ -85,17 +87,19 @@
             this.textBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPassword.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(12, 22);
+            this.textBoxPassword.Location = new System.Drawing.Point(9, 18);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(1033, 41);
+            this.textBoxPassword.Size = new System.Drawing.Size(776, 35);
             this.textBoxPassword.TabIndex = 3;
             // 
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(9, 2);
+            this.labelPassword.Location = new System.Drawing.Point(7, 2);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(306, 17);
+            this.labelPassword.Size = new System.Drawing.Size(234, 13);
             this.labelPassword.TabIndex = 4;
             this.labelPassword.Text = "When a Password is found, we will show it here!";
             // 
@@ -105,18 +109,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxJTROutput.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxJTROutput.Location = new System.Drawing.Point(12, 454);
+            this.richTextBoxJTROutput.Location = new System.Drawing.Point(9, 369);
+            this.richTextBoxJTROutput.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxJTROutput.Name = "richTextBoxJTROutput";
-            this.richTextBoxJTROutput.Size = new System.Drawing.Size(1033, 327);
+            this.richTextBoxJTROutput.Size = new System.Drawing.Size(776, 266);
             this.richTextBoxJTROutput.TabIndex = 7;
             this.richTextBoxJTROutput.Text = "";
             // 
             // buttonStop
             // 
             this.buttonStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStop.Location = new System.Drawing.Point(918, 418);
+            this.buttonStop.Location = new System.Drawing.Point(688, 340);
+            this.buttonStop.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(127, 30);
+            this.buttonStop.Size = new System.Drawing.Size(95, 24);
             this.buttonStop.TabIndex = 8;
             this.buttonStop.Text = "Universal Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
@@ -125,44 +131,49 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 434);
+            this.label1.Location = new System.Drawing.Point(9, 353);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 17);
+            this.label1.Size = new System.Drawing.Size(359, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "John The Ripper Output: This is a view of the password breaking process. ";
             // 
             // labelStep3
             // 
             this.labelStep3.AutoSize = true;
-            this.labelStep3.Location = new System.Drawing.Point(9, 247);
+            this.labelStep3.Location = new System.Drawing.Point(7, 201);
+            this.labelStep3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStep3.Name = "labelStep3";
-            this.labelStep3.Size = new System.Drawing.Size(402, 17);
+            this.labelStep3.Size = new System.Drawing.Size(300, 13);
             this.labelStep3.TabIndex = 10;
             this.labelStep3.Text = "Step 3: Reserved for future capability. Contact us for requests ";
             // 
             // labelStep4
             // 
             this.labelStep4.AutoSize = true;
-            this.labelStep4.Location = new System.Drawing.Point(9, 338);
+            this.labelStep4.Location = new System.Drawing.Point(7, 275);
+            this.labelStep4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStep4.Name = "labelStep4";
-            this.labelStep4.Size = new System.Drawing.Size(394, 17);
+            this.labelStep4.Size = new System.Drawing.Size(292, 13);
             this.labelStep4.TabIndex = 11;
             this.labelStep4.Text = "Step 4: Brute Force is a last resort. Use rules and masks first!";
             // 
             // labelStep1
             // 
             this.labelStep1.AutoSize = true;
-            this.labelStep1.Location = new System.Drawing.Point(9, 78);
+            this.labelStep1.Location = new System.Drawing.Point(7, 63);
+            this.labelStep1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelStep1.Name = "labelStep1";
-            this.labelStep1.Size = new System.Drawing.Size(49, 17);
+            this.labelStep1.Size = new System.Drawing.Size(38, 13);
             this.labelStep1.TabIndex = 12;
             this.labelStep1.Text = "Step 1";
             // 
             // buttonBruteForce
             // 
-            this.buttonBruteForce.Location = new System.Drawing.Point(12, 358);
+            this.buttonBruteForce.Location = new System.Drawing.Point(9, 291);
+            this.buttonBruteForce.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBruteForce.Name = "buttonBruteForce";
-            this.buttonBruteForce.Size = new System.Drawing.Size(130, 51);
+            this.buttonBruteForce.Size = new System.Drawing.Size(98, 41);
             this.buttonBruteForce.TabIndex = 13;
             this.buttonBruteForce.Text = "Start Brute Force";
             this.buttonBruteForce.UseVisualStyleBackColor = true;
@@ -170,9 +181,10 @@
             // 
             // buttonBestGuess
             // 
-            this.buttonBestGuess.Location = new System.Drawing.Point(12, 267);
+            this.buttonBestGuess.Location = new System.Drawing.Point(9, 217);
+            this.buttonBestGuess.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBestGuess.Name = "buttonBestGuess";
-            this.buttonBestGuess.Size = new System.Drawing.Size(130, 51);
+            this.buttonBestGuess.Size = new System.Drawing.Size(98, 41);
             this.buttonBestGuess.TabIndex = 14;
             this.buttonBestGuess.Text = "Start Best Guess";
             this.buttonBestGuess.UseVisualStyleBackColor = true;
@@ -180,9 +192,10 @@
             // 
             // buttonMask
             // 
-            this.buttonMask.Location = new System.Drawing.Point(12, 181);
+            this.buttonMask.Location = new System.Drawing.Point(9, 147);
+            this.buttonMask.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMask.Name = "buttonMask";
-            this.buttonMask.Size = new System.Drawing.Size(130, 51);
+            this.buttonMask.Size = new System.Drawing.Size(98, 41);
             this.buttonMask.TabIndex = 15;
             this.buttonMask.Text = "Start Mask";
             this.buttonMask.UseVisualStyleBackColor = true;
@@ -190,9 +203,10 @@
             // 
             // buttonBestGuessEdit
             // 
-            this.buttonBestGuessEdit.Location = new System.Drawing.Point(148, 267);
+            this.buttonBestGuessEdit.Location = new System.Drawing.Point(111, 217);
+            this.buttonBestGuessEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBestGuessEdit.Name = "buttonBestGuessEdit";
-            this.buttonBestGuessEdit.Size = new System.Drawing.Size(75, 51);
+            this.buttonBestGuessEdit.Size = new System.Drawing.Size(56, 41);
             this.buttonBestGuessEdit.TabIndex = 16;
             this.buttonBestGuessEdit.Text = "Edit";
             this.buttonBestGuessEdit.UseVisualStyleBackColor = true;
@@ -200,32 +214,36 @@
             // 
             // buttonMaskEdit
             // 
-            this.buttonMaskEdit.Location = new System.Drawing.Point(148, 181);
+            this.buttonMaskEdit.Location = new System.Drawing.Point(111, 147);
+            this.buttonMaskEdit.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMaskEdit.Name = "buttonMaskEdit";
-            this.buttonMaskEdit.Size = new System.Drawing.Size(75, 51);
+            this.buttonMaskEdit.Size = new System.Drawing.Size(56, 41);
             this.buttonMaskEdit.TabIndex = 17;
             this.buttonMaskEdit.Text = "Edit";
             this.buttonMaskEdit.UseVisualStyleBackColor = true;
             this.buttonMaskEdit.Visible = false;
             this.buttonMaskEdit.Click += new System.EventHandler(this.ButtonMaskEdit_Click);
             // 
-            // pictureBox1
+            // pictureBoxRecovery
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.pictureBoxRecovery.Image = global::TezosPassordCrackerForWindows.Properties.Resources.TezosRecoveryPicture;
+            this.pictureBoxRecovery.InitialImage = global::TezosPassordCrackerForWindows.Properties.Resources.TezosRecoveryPicture;
+            this.pictureBoxRecovery.Location = new System.Drawing.Point(4, 13);
+            this.pictureBoxRecovery.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxRecovery.Name = "pictureBoxRecovery";
+            this.pictureBoxRecovery.Size = new System.Drawing.Size(150, 162);
+            this.pictureBoxRecovery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxRecovery.TabIndex = 19;
+            this.pictureBoxRecovery.TabStop = false;
+            this.pictureBoxRecovery.Click += new System.EventHandler(this.PictureBoxRecovery_Click);
             // 
             // linkLabelTelegram
             // 
             this.linkLabelTelegram.AutoSize = true;
-            this.linkLabelTelegram.Location = new System.Drawing.Point(403, 82);
+            this.linkLabelTelegram.Location = new System.Drawing.Point(302, 67);
+            this.linkLabelTelegram.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelTelegram.Name = "linkLabelTelegram";
-            this.linkLabelTelegram.Size = new System.Drawing.Size(166, 17);
+            this.linkLabelTelegram.Size = new System.Drawing.Size(123, 13);
             this.linkLabelTelegram.TabIndex = 20;
             this.linkLabelTelegram.TabStop = true;
             this.linkLabelTelegram.Text = "Telegram Support Group";
@@ -235,67 +253,127 @@
             // groupBoxResources
             // 
             this.groupBoxResources.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxResources.Controls.Add(this.label2);
+            this.groupBoxResources.Controls.Add(this.labelBitcoinDonationAddress);
             this.groupBoxResources.Controls.Add(this.textBoxEmailSupport);
             this.groupBoxResources.Controls.Add(this.labelDonationTezosAddress);
             this.groupBoxResources.Controls.Add(this.linkLabelTelegram);
             this.groupBoxResources.Controls.Add(this.linkLabelDonationBTC);
             this.groupBoxResources.Controls.Add(this.linkLabelEmail);
             this.groupBoxResources.Controls.Add(this.linkLabelDonationTezos);
-            this.groupBoxResources.Controls.Add(this.pictureBox1);
+            this.groupBoxResources.Controls.Add(this.pictureBoxRecovery);
             this.groupBoxResources.Controls.Add(this.labelDonations);
             this.groupBoxResources.Controls.Add(this.textBoxDeveloperInfo);
             this.groupBoxResources.Controls.Add(this.linkLabelGitHub);
             this.groupBoxResources.Controls.Add(this.textBoxAbout);
-            this.groupBoxResources.Location = new System.Drawing.Point(470, 69);
+            this.groupBoxResources.Location = new System.Drawing.Point(352, 56);
+            this.groupBoxResources.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxResources.Name = "groupBoxResources";
-            this.groupBoxResources.Size = new System.Drawing.Size(575, 340);
+            this.groupBoxResources.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxResources.Size = new System.Drawing.Size(431, 276);
             this.groupBoxResources.TabIndex = 21;
             this.groupBoxResources.TabStop = false;
             this.groupBoxResources.Text = "Additional Resources";
+            // 
+            // labelBitcoinDonationAddress
+            // 
+            this.labelBitcoinDonationAddress.AutoSize = true;
+            this.labelBitcoinDonationAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBitcoinDonationAddress.Location = new System.Drawing.Point(29, 232);
+            this.labelBitcoinDonationAddress.Name = "labelBitcoinDonationAddress";
+            this.labelBitcoinDonationAddress.Size = new System.Drawing.Size(51, 15);
+            this.labelBitcoinDonationAddress.TabIndex = 35;
+            this.labelBitcoinDonationAddress.Text = "Bitcoin";
             // 
             // textBoxEmailSupport
             // 
             this.textBoxEmailSupport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxEmailSupport.Enabled = false;
-            this.textBoxEmailSupport.Location = new System.Drawing.Point(212, 179);
+            this.textBoxEmailSupport.Location = new System.Drawing.Point(159, 145);
+            this.textBoxEmailSupport.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmailSupport.Multiline = true;
             this.textBoxEmailSupport.Name = "textBoxEmailSupport";
             this.textBoxEmailSupport.ReadOnly = true;
-            this.textBoxEmailSupport.Size = new System.Drawing.Size(329, 17);
+            this.textBoxEmailSupport.Size = new System.Drawing.Size(247, 14);
             this.textBoxEmailSupport.TabIndex = 25;
             this.textBoxEmailSupport.Text = "You can send an email to us.";
+            // 
+            // labelDonationTezosAddress
+            // 
+            this.labelDonationTezosAddress.AutoSize = true;
+            this.labelDonationTezosAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDonationTezosAddress.Location = new System.Drawing.Point(29, 206);
+            this.labelDonationTezosAddress.Name = "labelDonationTezosAddress";
+            this.labelDonationTezosAddress.Size = new System.Drawing.Size(45, 15);
+            this.labelDonationTezosAddress.TabIndex = 34;
+            this.labelDonationTezosAddress.Text = "Tezos";
+            // 
+            // linkLabelDonationBTC
+            // 
+            this.linkLabelDonationBTC.AutoSize = true;
+            this.linkLabelDonationBTC.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelDonationBTC.Location = new System.Drawing.Point(80, 231);
+            this.linkLabelDonationBTC.Name = "linkLabelDonationBTC";
+            this.linkLabelDonationBTC.Size = new System.Drawing.Size(280, 16);
+            this.linkLabelDonationBTC.TabIndex = 33;
+            this.linkLabelDonationBTC.TabStop = true;
+            this.linkLabelDonationBTC.Text = "33DxcicBuN7wvqByLfmHH9FC9AvuEa3cGh";
+            this.linkLabelDonationBTC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelDonationBTC_LinkClicked);
             // 
             // linkLabelEmail
             // 
             this.linkLabelEmail.AutoSize = true;
-            this.linkLabelEmail.Location = new System.Drawing.Point(403, 199);
+            this.linkLabelEmail.Location = new System.Drawing.Point(302, 162);
+            this.linkLabelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelEmail.Name = "linkLabelEmail";
-            this.linkLabelEmail.Size = new System.Drawing.Size(166, 17);
+            this.linkLabelEmail.Size = new System.Drawing.Size(127, 13);
             this.linkLabelEmail.TabIndex = 24;
             this.linkLabelEmail.TabStop = true;
             this.linkLabelEmail.Text = "TezosHelp@outlook.com";
             this.linkLabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabelEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelEmail_LinkClicked);
             // 
+            // linkLabelDonationTezos
+            // 
+            this.linkLabelDonationTezos.AutoSize = true;
+            this.linkLabelDonationTezos.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelDonationTezos.Location = new System.Drawing.Point(80, 204);
+            this.linkLabelDonationTezos.Name = "linkLabelDonationTezos";
+            this.linkLabelDonationTezos.Size = new System.Drawing.Size(296, 16);
+            this.linkLabelDonationTezos.TabIndex = 32;
+            this.linkLabelDonationTezos.TabStop = true;
+            this.linkLabelDonationTezos.Text = "tz1WYZrE1Lhd5cgh4vzUhJB1UBNGEdekbskQ";
+            this.linkLabelDonationTezos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelDonationTezos_LinkClicked);
+            // 
+            // labelDonations
+            // 
+            this.labelDonations.AutoSize = true;
+            this.labelDonations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDonations.Location = new System.Drawing.Point(8, 186);
+            this.labelDonations.Name = "labelDonations";
+            this.labelDonations.Size = new System.Drawing.Size(166, 15);
+            this.labelDonations.TabIndex = 31;
+            this.labelDonations.Text = "Donations are welcome: ";
+            // 
             // textBoxDeveloperInfo
             // 
             this.textBoxDeveloperInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDeveloperInfo.Enabled = false;
-            this.textBoxDeveloperInfo.Location = new System.Drawing.Point(212, 123);
+            this.textBoxDeveloperInfo.Location = new System.Drawing.Point(159, 100);
+            this.textBoxDeveloperInfo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDeveloperInfo.Multiline = true;
             this.textBoxDeveloperInfo.Name = "textBoxDeveloperInfo";
             this.textBoxDeveloperInfo.ReadOnly = true;
-            this.textBoxDeveloperInfo.Size = new System.Drawing.Size(329, 21);
+            this.textBoxDeveloperInfo.Size = new System.Drawing.Size(247, 17);
             this.textBoxDeveloperInfo.TabIndex = 23;
             this.textBoxDeveloperInfo.Text = "You can contact the development team on  GitHub:";
             // 
             // linkLabelGitHub
             // 
             this.linkLabelGitHub.AutoSize = true;
-            this.linkLabelGitHub.Location = new System.Drawing.Point(403, 147);
+            this.linkLabelGitHub.Location = new System.Drawing.Point(302, 119);
+            this.linkLabelGitHub.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelGitHub.Name = "linkLabelGitHub";
-            this.linkLabelGitHub.Size = new System.Drawing.Size(169, 17);
+            this.linkLabelGitHub.Size = new System.Drawing.Size(126, 13);
             this.linkLabelGitHub.TabIndex = 22;
             this.linkLabelGitHub.TabStop = true;
             this.linkLabelGitHub.Text = "GitHub (LordDarkHelmet)";
@@ -306,80 +384,22 @@
             // 
             this.textBoxAbout.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxAbout.Enabled = false;
-            this.textBoxAbout.Location = new System.Drawing.Point(212, 21);
+            this.textBoxAbout.Location = new System.Drawing.Point(159, 17);
+            this.textBoxAbout.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAbout.Multiline = true;
             this.textBoxAbout.Name = "textBoxAbout";
             this.textBoxAbout.ReadOnly = true;
-            this.textBoxAbout.Size = new System.Drawing.Size(357, 58);
+            this.textBoxAbout.Size = new System.Drawing.Size(268, 47);
             this.textBoxAbout.TabIndex = 21;
             this.textBoxAbout.Text = "This program was made by the Tezos XTZ Recovery group. It is here to make crackin" +
     "g your password a little bit easier for Windows 10. If you need help, please joi" +
     "n out group.";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 286);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Bitcoin";
-            // 
-            // labelDonationTezosAddress
-            // 
-            this.labelDonationTezosAddress.AutoSize = true;
-            this.labelDonationTezosAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDonationTezosAddress.Location = new System.Drawing.Point(39, 253);
-            this.labelDonationTezosAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDonationTezosAddress.Name = "labelDonationTezosAddress";
-            this.labelDonationTezosAddress.Size = new System.Drawing.Size(55, 18);
-            this.labelDonationTezosAddress.TabIndex = 34;
-            this.labelDonationTezosAddress.Text = "Tezos";
-            // 
-            // linkLabelDonationBTC
-            // 
-            this.linkLabelDonationBTC.AutoSize = true;
-            this.linkLabelDonationBTC.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelDonationBTC.Location = new System.Drawing.Point(107, 284);
-            this.linkLabelDonationBTC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabelDonationBTC.Name = "linkLabelDonationBTC";
-            this.linkLabelDonationBTC.Size = new System.Drawing.Size(349, 20);
-            this.linkLabelDonationBTC.TabIndex = 33;
-            this.linkLabelDonationBTC.TabStop = true;
-            this.linkLabelDonationBTC.Text = "33DxcicBuN7wvqByLfmHH9FC9AvuEa3cGh";
-            this.linkLabelDonationBTC.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelDonationBTC_LinkClicked);
-            // 
-            // linkLabelDonationTezos
-            // 
-            this.linkLabelDonationTezos.AutoSize = true;
-            this.linkLabelDonationTezos.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelDonationTezos.Location = new System.Drawing.Point(107, 251);
-            this.linkLabelDonationTezos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.linkLabelDonationTezos.Name = "linkLabelDonationTezos";
-            this.linkLabelDonationTezos.Size = new System.Drawing.Size(369, 20);
-            this.linkLabelDonationTezos.TabIndex = 32;
-            this.linkLabelDonationTezos.TabStop = true;
-            this.linkLabelDonationTezos.Text = "tz1WYZrE1Lhd5cgh4vzUhJB1UBNGEdekbskQ";
-            this.linkLabelDonationTezos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelDonationTezos_LinkClicked);
-            // 
-            // labelDonations
-            // 
-            this.labelDonations.AutoSize = true;
-            this.labelDonations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDonations.Location = new System.Drawing.Point(10, 229);
-            this.labelDonations.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDonations.Name = "labelDonations";
-            this.labelDonations.Size = new System.Drawing.Size(196, 18);
-            this.labelDonations.TabIndex = 31;
-            this.labelDonations.Text = "Donations are welcome: ";
-            // 
             // TezosPasswordCracker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 793);
+            this.ClientSize = new System.Drawing.Size(793, 644);
             this.Controls.Add(this.groupBoxResources);
             this.Controls.Add(this.buttonMaskEdit);
             this.Controls.Add(this.buttonBestGuessEdit);
@@ -397,11 +417,12 @@
             this.Controls.Add(this.labelStep2);
             this.Controls.Add(this.buttonGenerateHashesFile);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TezosPasswordCracker";
             this.Text = "Tezos XTZ Recovery";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TezosPasswordCracker_FormClosing);
             this.Load += new System.EventHandler(this.TezosPasswordCracker_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecovery)).EndInit();
             this.groupBoxResources.ResumeLayout(false);
             this.groupBoxResources.PerformLayout();
             this.ResumeLayout(false);
@@ -426,7 +447,7 @@
         private System.Windows.Forms.Button buttonMask;
         private System.Windows.Forms.Button buttonBestGuessEdit;
         private System.Windows.Forms.Button buttonMaskEdit;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxRecovery;
         private System.Windows.Forms.LinkLabel linkLabelTelegram;
         private System.Windows.Forms.GroupBox groupBoxResources;
         private System.Windows.Forms.LinkLabel linkLabelEmail;
@@ -434,7 +455,7 @@
         private System.Windows.Forms.LinkLabel linkLabelGitHub;
         private System.Windows.Forms.TextBox textBoxAbout;
         private System.Windows.Forms.TextBox textBoxEmailSupport;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelBitcoinDonationAddress;
         private System.Windows.Forms.Label labelDonationTezosAddress;
         private System.Windows.Forms.LinkLabel linkLabelDonationBTC;
         private System.Windows.Forms.LinkLabel linkLabelDonationTezos;
