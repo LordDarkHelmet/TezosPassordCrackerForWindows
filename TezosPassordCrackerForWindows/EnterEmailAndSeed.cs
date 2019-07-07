@@ -310,5 +310,10 @@ namespace TezosPassordCrackerForWindows
             ReadMyTezosHashesConfig();
             
         }
+
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.No;
+        }
     }
 }

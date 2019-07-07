@@ -39,6 +39,7 @@
             this.labelWarning = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelSeed
@@ -60,7 +61,7 @@
             this.textBoxSeed.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxSeed.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSeed.Location = new System.Drawing.Point(9, 233);
-            this.textBoxSeed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxSeed.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSeed.Multiline = true;
             this.textBoxSeed.Name = "textBoxSeed";
             this.textBoxSeed.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -97,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxEmail.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEmail.Location = new System.Drawing.Point(11, 359);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.MaxLength = 51;
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(570, 28);
@@ -109,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPublicKey.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPublicKey.Location = new System.Drawing.Point(9, 415);
-            this.textBoxPublicKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPublicKey.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPublicKey.Name = "textBoxPublicKey";
             this.textBoxPublicKey.Size = new System.Drawing.Size(570, 28);
             this.textBoxPublicKey.TabIndex = 4;
@@ -119,11 +120,11 @@
             this.buttonSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSet.Location = new System.Drawing.Point(492, 476);
-            this.buttonSet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSet.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSet.Name = "buttonSet";
             this.buttonSet.Size = new System.Drawing.Size(86, 41);
             this.buttonSet.TabIndex = 5;
-            this.buttonSet.Text = "Generate";
+            this.buttonSet.Text = "Save";
             this.buttonSet.UseVisualStyleBackColor = true;
             this.buttonSet.Click += new System.EventHandler(this.ButtonSet_Click);
             // 
@@ -163,7 +164,7 @@
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(9, 46);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(568, 158);
@@ -171,11 +172,25 @@
             this.richTextBox1.TabStop = false;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(402, 476);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(86, 41);
+            this.buttonCancel.TabIndex = 16;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
+            // 
             // EnterEmailAndSeed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 526);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelWarning);
@@ -187,7 +202,7 @@
             this.Controls.Add(this.textBoxSeed);
             this.Controls.Add(this.labelSeed);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(604, 556);
             this.Name = "EnterEmailAndSeed";
             this.Text = "Setup Your Information";
@@ -209,5 +224,6 @@
         private System.Windows.Forms.Label labelWarning;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

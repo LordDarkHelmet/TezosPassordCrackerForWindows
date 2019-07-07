@@ -26,10 +26,10 @@ Step 6: Click Install<br>
 Step 7: The application should automatically launch. You can always launch it from the start menu or the icon placed on your desktop<br>
 ![Icon](./TezosPassordCrackerForWindows/Screenshots/Install-Icon.png)
 
-Step 8: Click on the Edit Information Button to start.<br>
+Step 8: Click on the "Add Information" Button to start.<br>
 ![First Screen](./TezosPassordCrackerForWindows/Screenshots/screenshot-First-Time.png)
 
-Step 9: Enter the information found on your contribution PDF. DO NOT SHARE THIS INFORMATION WITH ANYONE!<br>
+Step 9: Enter the information found on your contribution PDF. DO NOT SHARE THIS INFORMATION WITH ANYONE! Then Press Save.<br>
 ![Enter Your Information](./TezosPassordCrackerForWindows/Screenshots/Screenshot-EnterYourSeedEmailPublicAddress.png)
 
 Step 10: Use one of the options to crack your password. I recomend using masks.
