@@ -1,4 +1,4 @@
-# Tezos Passord Cracker For Windows
+# Tezos Password Cracker For Windows
 A Windows application that aids in the recovery of lost Tezos ICO passwords. 
 
 ![Screenshot](./TezosPassordCrackerForWindows/Screenshots/Screenshot-FoundPassword.png)
