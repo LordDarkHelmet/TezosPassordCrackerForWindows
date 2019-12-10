@@ -15,7 +15,7 @@ Setp 2: When Installing be sure to check "Add Python 3.7 to PATH"<br>
 Setp 3: Depending on your machine, the installer may ask you to extend your PATH limitations. This should be OK to do if you need to do it.<br>
 ![Install-Python-Disable-Path-Lenght-Limit](./TezosPassordCrackerForWindows/Screenshots/Install-Python-Disable-Path-Lenght-Limit.png)
 
-Step 4: [Download the most recent release](https://github.com/LordDarkHelmet/TezosPassordCrackerForWindows/releases) 
+Step 4: [Download the most recent release](https://github.com/LordDarkHelmet/TezosPassordCrackerForWindows/releases/download/v1.2.1/TezosPassordCrackerForWindows_v1_2_1.zip) 
 
 Step 5: Unzip the downloaded release to a directory of your choosing then double click on the installer<br>
 ![Install-Open-Installer](./TezosPassordCrackerForWindows/Screenshots/Install-Open-Installer.png)
